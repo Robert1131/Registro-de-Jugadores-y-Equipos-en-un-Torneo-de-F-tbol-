@@ -1,49 +1,40 @@
-# Registro de Jugadores y Equipos - Torneo de Fútbol
+Equipo 'Barcelona' agregado correctamente.
+Equipo 'Real Madrid' agregado correctamente.
+Equipo 'Manchester United' agregado correctamente.
+Equipo 'Bayern Munich' agregado correctamente.
+Jugador 'Lionel Messi' agregado al equipo 'Barcelona'.
+Jugador 'Xavi Hernández' agregado al equipo 'Barcelona'.
+Jugador 'Andrés Iniesta' agregado al equipo 'Barcelona'.
+Jugador 'Karim Benzema' agregado al equipo 'Real Madrid'.
+Jugador 'Luka Modric' agregado al equipo 'Real Madrid'.
+Jugador 'Sergio Ramos' agregado al equipo 'Real Madrid'.
+Jugador 'Cristiano Ronaldo' agregado al equipo 'Manchester United'.
+Jugador 'Paul Pogba' agregado al equipo 'Manchester United'.
+Jugador 'Bruno Fernandes' agregado al equipo 'Manchester United'.
+Jugador 'Robert Lewandowski' agregado al equipo 'Bayern Munich'.
+Jugador 'Thomas Müller' agregado al equipo 'Bayern Munich'.
+Jugador 'Manuel Neuer' agregado al equipo 'Bayern Munich'.
 
-## Descripción
-Esta aplicación permite registrar equipos y jugadores para un torneo de fútbol, utilizando **diccionarios (mapas)** y **conjuntos** como estructuras de datos principales.  
-Permite realizar reportes, consultas de jugadores y medir el tiempo de ejecución de todas las operaciones.
+--- Equipos registrados ---
+Equipo: Barcelona
+ - Xavi Hernández
+ - Andrés Iniesta
+ - Lionel Messi
+Equipo: Real Madrid
+ - Sergio Ramos
+ - Luka Modric
+ - Karim Benzema
+Equipo: Manchester United
+ - Cristiano Ronaldo
+ - Paul Pogba
+ - Bruno Fernandes
+Equipo: Bayern Munich
+ - Thomas Müller
+ - Robert Lewandowski
+ - Manuel Neuer
 
----
+El jugador 'Lionel Messi' pertenece al equipo 'Barcelona'.
+El jugador 'Cristiano Ronaldo' pertenece al equipo 'Manchester United'.
+El jugador 'Neymar Jr' no pertenece a ningún equipo.
 
-## Funcionalidades
-- Agregar equipos al torneo.  
-- Agregar jugadores a cada equipo.  
-- Visualizar todos los equipos y sus jugadores (**reportería**).  
-- Consultar si un jugador pertenece a algún equipo.  
-- Medición del tiempo total de ejecución del programa.
-
----
-
-## Estructura de Datos
-- **Diccionario (`dict`)**: Relaciona el nombre del equipo con un conjunto de jugadores.  
-- **Conjunto (`set`)**: Asegura que no se registren jugadores duplicados dentro del mismo equipo.
-
-**Ventajas:**
-- Búsqueda y registro rápido de jugadores por equipo.  
-- Evita duplicados de manera automática.  
-
-**Desventajas:**
-- No mantiene un orden específico de equipos o jugadores.  
-- No es ideal para búsquedas complejas fuera de equipo/jugador.
-
----
-
-## Uso de IA
-- **Agente utilizado:** ChatGPT (GPT-5 mini)  
-- **Porcentaje de código generado con IA:** 40%
-
----
-
-## Datos de ejemplo incluidos
-- **Equipos:** Barcelona, Real Madrid, Manchester United, Bayern Munich  
-- **Jugadores:** Lionel Messi, Xavi Hernández, Andrés Iniesta, Karim Benzema, Luka Modric, Sergio Ramos, Cristiano Ronaldo, Paul Pogba, Bruno Fernandes, Robert Lewandowski, Thomas Müller, Manuel Neuer  
-
----
-
-## Ejecución
-1. Clonar o descargar el repositorio.  
-2. Ejecutar el archivo `main.py` con Python 3:
-
-
-
+Tiempo de ejecución: 0.000123 segundos
