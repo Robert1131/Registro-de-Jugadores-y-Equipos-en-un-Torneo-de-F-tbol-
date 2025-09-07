@@ -1,0 +1,80 @@
+import time
+
+# Diccionario para registrar equipos y sus jugadores
+equipos = {}
+
+# Función para agregar un equipo
+def agregar_equipo(nombre_equipo):
+    """Agrega un equipo al torneo."""
+    if nombre_equipo not in equipos:
+        equipos[nombre_equipo] = set()
+        print(f"Equipo '{nombre_equipo}' agregado correctamente.")
+    else:
+        print(f"El equipo '{nombre_equipo}' ya existe.")
+
+# Función para agregar un jugador a un equipo
+def agregar_jugador(equipo, jugador):
+    """Agrega un jugador a un equipo."""
+    if equipo in equipos:
+        if jugador not in equipos[equipo]:
+            equipos[equipo].add(jugador)
+            print(f"Jugador '{jugador}' agregado al equipo '{equipo}'.")
+        else:
+            print(f"El jugador '{jugador}' ya está en el equipo '{equipo}'.")
+    else:
+        print(f"El equipo '{equipo}' no existe.")
+
+# Función para mostrar todos los equipos y sus jugadores (reportería)
+def mostrar_equipos():
+    print("\n--- Equipos registrados ---")
+    for equipo, jugadores in equipos.items():
+        print(f"Equipo: {equipo}")
+        for jugador in jugadores:
+            print(f" - {jugador}")
+
+# Función para consultar si un jugador pertenece a algún equipo
+def consultar_jugador(nombre_jugador):
+    for equipo, jugadores in equipos.items():
+        if nombre_jugador in jugadores:
+            print(f"El jugador '{nombre_jugador}' pertenece al equipo '{equipo}'.")
+            return
+    print(f"El jugador '{nombre_jugador}' no pertenece a ningún equipo.")
+
+# Medir tiempo de ejecución
+inicio = time.time()
+
+# ---- DATOS DE EJEMPLO ----
+# Agregar equipos
+agregar_equipo("Barcelona")
+agregar_equipo("Real Madrid")
+agregar_equipo("Manchester United")
+agregar_equipo("Bayern Munich")
+
+# Agregar jugadores
+agregar_jugador("Barcelona", "Lionel Messi")
+agregar_jugador("Barcelona", "Xavi Hernández")
+agregar_jugador("Barcelona", "Andrés Iniesta")
+
+agregar_jugador("Real Madrid", "Karim Benzema")
+agregar_jugador("Real Madrid", "Luka Modric")
+agregar_jugador("Real Madrid", "Sergio Ramos")
+
+agregar_jugador("Manchester United", "Cristiano Ronaldo")
+agregar_jugador("Manchester United", "Paul Pogba")
+agregar_jugador("Manchester United", "Bruno Fernandes")
+
+agregar_jugador("Bayern Munich", "Robert Lewandowski")
+agregar_jugador("Bayern Munich", "Thomas Müller")
+agregar_jugador("Bayern Munich", "Manuel Neuer")
+
+# Mostrar equipos y jugadores
+mostrar_equipos()
+
+# Consultar jugadores
+consultar_jugador("Lionel Messi")
+consultar_jugador("Cristiano Ronaldo")
+consultar_jugador("Neymar Jr")
+
+# Fin de medición del tiempo de ejecución
+fin = time.time()
+print(f"\nTiempo de ejecución: {fin - inicio:.6f} segundos")
